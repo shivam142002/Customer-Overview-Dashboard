@@ -1,0 +1,529 @@
+
+  
+
+
+
+
+
+  body, h1, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    background-color: #f8f9fa;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.tabs-container {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.MuiTabs-flexContainer {
+    justify-content: space-between;
+}
+
+.tab-content {
+    padding: 20px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card h5 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.card h4 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card .positive {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.card .negative {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.card .no-change {
+    color: #6c757d;
+}
+
+.vendor-activity {
+    margin-top: 20px;
+}
+
+.vendor-activity h6 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.vendor-activity .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-right: 10px;
+}
+
+.filter-select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-right: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.vendor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.vendor-table th, .vendor-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.vendor-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.vendor-table td {
+    color: #333;
+}
+
+.vendor-table tr:hover {
+    background-color: #f1f3f5;
+}
+
+.vendor-table .status-paid {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.vendor-table .status-failed {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.vendor-table .status-pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px; /* Space between elements */
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds consistent spacing between all elements */
+}
+
+
+
+
+
+
+/* VendorTable.css */
+
+/* Table Styling */
+.table-container {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border-bottom: 2px solid #dddddd;
+}
+
+.table-container td {
+    border-bottom: 1px solid #dddddd;
+    vertical-align: middle;
+}
+
+/* Company Name Column */
+.company-name-cell {
+    display: flex;
+    align-items: center;
+}
+
+.company-name-checkbox {
+    margin-right: 10px;
+}
+
+/* Performance Progress Bar */
+.performance-cell {
+    display: flex;
+    align-items: center;
+}
+
+.performance-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.performance-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Status Column Colors */
+.status-paid {
+    color: green;
+    font-weight: bold;
+}
+
+.status-failed {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}
+
+
+
+
+/* Global CSS Styles */
+
+/* Overall Dashboard Container */
+.dashboard-container {
+    display: flex;
+    background-color: #f7f8fa;
+}
+
+/* Content Section */
+.content {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Overview Header */
+.overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.overview-title {
+    font-size: 24px;
+    font-weight: 10000;
+
+}
+
+.export-button {
+    background-color: #4caf50;
+}
+
+/* Tabs and Tab Content */
+.tabs-container {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.MuiTab-root {
+    min-width: auto;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.MuiTabs-indicator {
+    background-color: #4caf50;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .MuiTab-root {
+        margin-right: 10px; /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Box Styling for Cards */
+.normal-view .MuiGrid-item {
+    padding: 10px;
+}
+
+.normal-view .MuiCard-root {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.normal-view .MuiTypography-h5 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.normal-view .MuiTypography-h4 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Vendor Activity History */
+.vendor-activity-header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px; */
+    position:relative;
+}
+
+.vendor-activity-header .MuiTypography-h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom:5px;
+}
+
+.vendor-activity-header span {
+    font-size: 14px;
+    color: #888888;
+    margin-top: 0px;
+    display: block;
+
+}
+
+/* Buttons in Vendor Activity Header */
+.vendor-activity-header .MuiIconButton-root {
+    margin-left: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #555555;
+}
+
+/* Card Icons */
+.normal-view .MuiCardContent-root {
+    display: flex;
+    align-items: center;
+}
+
+.normal-view .card-icon {
+    margin-right: 20px;
+    font-size: 40px;
+    color: #4caf50;
+}
+
+/* Card Content Adjustment */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Spacing Adjustment for Tabs */
+.tabs-container .MuiTab-root {
+    margin-right: 15px;
+}
+
+/* Filter and Add Customer Button */
+.filter-button, .add-customer-button {
+    margin-left: 10px;
+    background-color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+.filter {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter .MuiTextField-root {
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter .MuiButton-root {
+    margin-left: 10px;
+}
+
+.filter .filter-options {
+    margin-top: 10px;
+}
+
+
+
+
+.filter {
+    margin-left: 20px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.filter-input,
+.status-select {
+    margin-right: 20px;
+    flex: 1;
+}
+
+.filtered-list {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.apply-filter-btn {
+    height: 40px;
+    flex:1;
+    margin-left: 10px;
+
+}
+
+.filter-options {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-chip {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Additional CSS to align elements in a row with equal spacing */
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 20px;
+}
+
+
+.filter {
+    display: flex;
+    flex-direction: center;  /* Arrange items in a column */
+    
+    justify-content: space-between;  /* Distribute equal space between items */
+    gap: 10px;  /* Add a gap between each item */
+    margin-bottom: 20px;
+    height: 100%;  
+}
+
+.filter .filter-input,
+.filter .status-select,
+.filter .apply-filter-btn {
+    flex: 1;  /* Allow each item to take up equal space */
+    max-width:30%;
+    margin-right:20px;
+    margin-right:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+.vendor-activity-history {
+    margin: 20px;
+  }
+  
+  .vendor-activity-history .table-container {
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .vendor-activity-history .performance-progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ddd;
+    position: relative;
+  }
+  
+  .vendor-activity-history .performance-progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* adjust this to reflect the performance percentage */
+    height: 100%;
+    border-radius: 10px;
+    background-color: #4CAF50; /* green color for progress */
+  }
+  
+  .vendor-activity-history .status-list {
+    text-align: center;
+  }
+  
+  .vendor-activity-history .status-list .paid {
+    color: #4CAF50; /* green color for paid */
+  }
+  
+  .vendor-activity-history .status-list .failed {
+    color: #f44336; /* red color for failed */
+  }
+  
+  .vendor-activity-history .status-list .pending {
+    color: #ffeb3b; /* yellow color for pending */
+  }
+  
+  .vendor-activity-history .add-customer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .vendor-activity-history .add-customer:hover {
+    background-color: #3e8e41;
+  }
